@@ -1,8 +1,10 @@
-# Overview
+Table of contents:
+
+[TOC]
+
+## Overview
 
 This git repo shows different approach of enabling code coverage testing for your application.
-
-
 
 I've also collected various links specifying one or another approach.
 
@@ -32,5 +34,17 @@ https://docs.microsoft.com/en-us/dotnet/core/versions/selection#the-sdk-uses-the
 
 
 
+### Cake build system
 
+Cake build system was added using following commands:
+
+```
+dotnet new console -n cakebuild
+dotnet sln XUnit.Coverage.sln add cakebuild/cakebuild.csproj --in-root
+dotnet add cakebuild/cakebuild.csproj package Cake.Common
+dotnet add cakebuild/cakebuild.csproj package Cake.Frosting
+dotnet add cakebuild/cakebuild.csproj package Cake.Coverlet
+```
+
+And after that some manual coding.
 
