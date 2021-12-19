@@ -6,7 +6,7 @@ using System.Text;
 namespace cakebuild
 {
     [TaskName(nameof(Default))]
-    [IsDependentOn(typeof(testUsingDotNet))]
+    [IsDependentOn(typeof(generateCoverageReport))]
     public class Default : FrostingTask<BuildContext>
     {
         public override void Run(BuildContext context)

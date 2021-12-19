@@ -11,7 +11,7 @@ namespace cakebuild
         public override void Run(BuildContext context)
         {
             string rootDir = context.RootDirectory;
-            string testResultsDir = Path.Combine(rootDir, $@"build\testResults");
+            string testResultsDir = context.TestResultsDirectory;
             string coverageRunsettings = Path.Combine(rootDir, ".runsettings"); ;
             //string projectPath = Path.Combine(rootDir, @"XUnit.Coverlet.Collector\XUnit.Coverlet.Collector.csproj"); ;
             string projectPath = Path.Combine(rootDir, @"XUnit.Coverlet.MSBuild\XUnit.Coverlet.MSBuild.csproj"); ;

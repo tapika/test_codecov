@@ -9,6 +9,7 @@ namespace cakebuild
         {
             var host = new CakeHost();
             host.UseContext<BuildContext>();
+            host.InstallTool(new Uri("nuget:?package=ReportGenerator&version=5.0.0"));
             return host.Run(args);
         }
     }
