@@ -12,6 +12,8 @@ Visual studio has built-in feature called "Auto Detect runsetting files" - by de
 
 
 
+### Methods to enable code coverage in Visual Studio
+
 There are various methods enabling code coverage in Visual Studio - I will list them with known problems and limitations.
 
 1. Coverlet.MsBuild (How to make it - [link](#xunit-project-set))
@@ -24,11 +26,13 @@ Cake integration - see `testUsingDotNetCoverlet`.
 
 
 
-### XUnit project set
+### Referenced / used documentation
+
+##### XUnit project set
 
 `Numbers`, `XUnit.Coverlet.Collector`, `XUnit.Coverlet.MSBuild` projects were made based on following article: [Use code coverage for unit testing](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows).
 
-#### Override .net core version
+##### Override .net core version
 
 By default dotnet will use latest .net core installed, if you however want to override that version - use following command to list available sdks:
 
@@ -40,9 +44,7 @@ And then force specific sdk by creating `global.json` file:
 
 https://docs.microsoft.com/en-us/dotnet/core/versions/selection#the-sdk-uses-the-latest-installed-version
 
-
-
-### Cake build system
+##### Cake build system
 
 Cake build system was added using following commands:
 
