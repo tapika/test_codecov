@@ -47,9 +47,7 @@ namespace cakebuild
             }
 
             string coverageRunsettings = System.IO.Path.Combine(rootDir, "coverlet.runsettings"); ;
-            string projectPath = System.IO.Path.Combine(rootDir, @"XUnit.Coverlet.MSBuild\XUnit.Coverlet.MSBuild.csproj"); ;
-
-            string outPath = System.IO.Path.Combine(rootDir, $@"XUnit.Coverlet.MSBuild\bin\Release\XUnit.Coverlet.MSBuild.dll");
+            string projectPath = System.IO.Path.Combine(rootDir, @"XUnit.Coverlet.Collector\XUnit.Coverlet.Collector.csproj"); ;
 
             var testSettings = new DotNetCoreTestSettings
             {
