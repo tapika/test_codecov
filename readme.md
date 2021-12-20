@@ -20,9 +20,15 @@ There are various methods enabling code coverage in Visual Studio - I will list 
 
 According to coverlet git has some issues, see [Known Issues](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/KnownIssues.md).
 
-Cake integration - see `testUsingDotNetCoverlet`.
+Cake integration - see `testCoverletEnableCoverage`.
 
 
+
+2. Coverlet , VsTest integration - see [link](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md).
+
+Cake integration - see `testCoverletXPlatCollector`.
+
+Code coverage is configured via `coverlet.runsettings`.
 
 
 
@@ -50,7 +56,6 @@ Cake build system was added using following commands:
 
 ```
 dotnet new console -n cakebuild
-dotnet sln XUnit.Coverage.sln add cakebuild/cakebuild.csproj --in-root
 dotnet add cakebuild/cakebuild.csproj package Cake.Common
 dotnet add cakebuild/cakebuild.csproj package Cake.Frosting
 dotnet add cakebuild/cakebuild.csproj package Cake.Coverlet

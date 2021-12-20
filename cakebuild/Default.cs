@@ -6,7 +6,8 @@ using System.Text;
 namespace cakebuild
 {
     [TaskName(nameof(Default))]
-    [IsDependentOn(typeof(generateCoverageReport))]
+    [IsDependentOn(typeof(testCoverletEnableCoverage))]
+    [IsDependentOn(typeof(testCoverletXPlatCollector ))]
     public class Default : FrostingTask<BuildContext>
     {
         public override void Run(BuildContext context)

@@ -19,14 +19,5 @@ namespace cakebuild
                 return rootDir;
             }
         }
-
-        public string TestResultsDirectory
-        {
-            get
-            {
-                string testResultsDir = Path.Combine(RootDirectory, @"build\testResults");
-                return testResultsDir;
-            }
-        }
     }
 }
