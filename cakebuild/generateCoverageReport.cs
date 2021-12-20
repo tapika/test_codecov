@@ -10,7 +10,7 @@ using System.Text;
 namespace cakebuild
 {
     [TaskName(nameof(generateCoverageReport))]
-    [IsDependentOn(typeof(testUsingDotNet))]
+    [IsDependentOn(typeof(testUsingDotNetCoverlet))]
     public class generateCoverageReport : FrostingTask<BuildContext>
     {
         ICakeLog log;

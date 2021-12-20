@@ -1,7 +1,3 @@
-Table of contents:
-
-[TOC]
-
 ## Overview
 
 This git repo shows different approach of enabling code coverage testing for your application.
@@ -13,6 +9,18 @@ I've also collected various links specifying one or another approach.
 ### Visual studio: Auto detect runsettings file
 
 Visual studio has built-in feature called "Auto Detect runsetting files" - by default Visual Studio will try to load `.runsetting` file from same place where solution file resides. (Based on this [link](https://developercommunity.visualstudio.com/t/auto-detect-runsettings-file-is-not-working/1033850))
+
+
+
+There are various methods enabling code coverage in Visual Studio - I will list them with known problems and limitations.
+
+1. Coverlet.MsBuild (How to make it - [link](#xunit-project-set))
+
+According to coverlet git has some issues, see [Known Issues](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/KnownIssues.md).
+
+Cake integration - see `testUsingDotNetCoverlet`.
+
+
 
 
 
