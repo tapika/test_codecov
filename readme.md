@@ -38,6 +38,8 @@ Code coverage is configured via `coverlet.runsettings`.
 
 `Numbers`, `XUnit.Coverlet.Collector`, `XUnit.Coverlet.MSBuild` projects were made based on following article: [Use code coverage for unit testing](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows).
 
+Original code sample provided with article can be found [here](https://github.com/dotnet/samples/tree/main/csharp/unit-testing-code-coverage).
+
 ##### Override .net core version
 
 By default dotnet will use latest .net core installed, if you however want to override that version - use following command to list available sdks:
