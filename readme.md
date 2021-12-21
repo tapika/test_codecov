@@ -24,6 +24,8 @@ Cake integration - see `testVsTest`.
 
 * **cons:** Commercial - available in Visual Studio Enterprise edition only ([link](https://github.com/coverlet-coverage/coverlet/issues/1269#issuecomment-998616715))
 
+* **cons:** Requires one extra conversion step `.coverage` (Binary file) > `.xml` > `report`, where other choices does not intermediate step.
+
   
 
 2. Coverlet.MsBuild (How to make it - [link](#xunit-project-set))
