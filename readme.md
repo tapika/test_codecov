@@ -16,21 +16,39 @@ Visual studio has built-in feature called "Auto Detect runsetting files" - by de
 
 There are various methods enabling code coverage in Visual Studio - I will list them with known problems and limitations.
 
-1. Coverlet.MsBuild (How to make it - [link](#xunit-project-set))
+1. Coverlet , VsTest integration - see [link](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md).
 
-According to coverlet git has some issues, see [Known Issues](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/KnownIssues.md).
+   Cake integration - see `testCoverletXPlatCollector`.
+   Code coverage is configured via `coverlet.runsettings`.
+
+* **pros:** Generally does not suffers from the same problems as 3rd options.
+
+* **cons:** Uses different configuration file than Visua Studio - Visual studio uses `.runsettings`, Coverlet uses `coverlet.coverage`
+
+* **pros:** Unlike alternative 2 - open source code.
+
+  
+
+2. Using Visual Studio built-in tools
+
+   Visual studio by default produce `.coverage` binary format, which in a turn requires conversion using `CodeCoverage.exe tool` ([link](https://github.com/danielpalme/ReportGenerator/wiki/Visual-Studio-Coverage-Tools))
+
+   Cake integration - see `testVsTest`.
+
+* **pros:** Visual studio and code coverage use same configuration file format (`.runsettings`)
+* **cons:** Commercial - available in Visual Studio Enterprise edition only ([link](https://github.com/coverlet-coverage/coverlet/issues/1269#issuecomment-998616715))
+
+
+
+2. Coverlet.MsBuild (How to make it - [link](#xunit-project-set))
 
 Cake integration - see `testCoverletEnableCoverage`.
 
+* Almost same as option 1. (Same pros/cons)
 
+* **cons:** According to coverlet git has some issues, see [Known Issues](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/KnownIssues.md).
 
-2. Coverlet , VsTest integration - see [link](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md).
-
-Cake integration - see `testCoverletXPlatCollector`.
-
-Code coverage is configured via `coverlet.runsettings`.
-
-
+  
 
 ### Referenced / used documentation
 
