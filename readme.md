@@ -2,9 +2,7 @@
 
 This git repo shows different approach of enabling code coverage testing for your application.
 
-I've also collected various links specifying one or another approach.
-
-
+I've collected **pros/cons** list of each alternative below.
 
 ### Visual studio: Auto detect runsettings file
 
@@ -16,39 +14,44 @@ Visual studio has built-in feature called "Auto Detect runsetting files" - by de
 
 There are various methods enabling code coverage in Visual Studio - I will list them with known problems and limitations.
 
-1. Coverlet , VsTest integration - see [link](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md).
+1. Using Visual Studio built-in tools
 
-   Cake integration - see `testCoverletXPlatCollector`.
-   Code coverage is configured via `coverlet.runsettings`.
+Visual studio by default produce `.coverage` binary format, which in a turn requires conversion using `CodeCoverage.exe tool` ([link](https://github.com/danielpalme/ReportGenerator/wiki/Visual-Studio-Coverage-Tools))
 
-* **pros:** Generally does not suffers from the same problems as 3rd option.
+Cake integration - see `testVsTest`.
 
-* **cons:** Uses different configuration file than Visua Studio - Visual studio uses `.runsettings`, Coverlet uses `coverlet.coverage`
+* **pros:** Visual studio and code coverage use same configuration file format (`.runsettings`)
 
-* **pros:** Unlike alternative 2 - open source code.
+* **cons:** Commercial - available in Visual Studio Enterprise edition only ([link](https://github.com/coverlet-coverage/coverlet/issues/1269#issuecomment-998616715))
 
   
 
-2. Using Visual Studio built-in tools
-
-   Visual studio by default produce `.coverage` binary format, which in a turn requires conversion using `CodeCoverage.exe tool` ([link](https://github.com/danielpalme/ReportGenerator/wiki/Visual-Studio-Coverage-Tools))
-
-   Cake integration - see `testVsTest`.
-
-* **pros:** Visual studio and code coverage use same configuration file format (`.runsettings`)
-* **cons:** Commercial - available in Visual Studio Enterprise edition only ([link](https://github.com/coverlet-coverage/coverlet/issues/1269#issuecomment-998616715))
-
-
-
-3. Coverlet.MsBuild (How to make it - [link](#xunit-project-set))
+2. Coverlet.MsBuild (How to make it - [link](#xunit-project-set))
 
 Cake integration - see `testCoverletEnableCoverage`.
 
-* Almost same as option 1. (Same pros/cons)
+* **cons:** Code coverage is configured differently - Visual Studio - Visual studio uses `.runsettings`, Coverlet is configured via command line (See `cakebuild/... CoverletSettings`)
 
 * **cons:** According to coverlet git has some issues, see [Known Issues](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/KnownIssues.md).
 
   
+
+3. Coverlet , VsTest integration - see [link](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/VSTestIntegration.md).
+
+Cake integration - see `testCoverletXPlatCollector`.
+Code coverage is configured via `coverlet.runsettings`.
+
+* **cons:** Uses different configuration file than Visual Studio - Visual studio uses `.runsettings`, Coverlet uses `coverlet.coverage`
+* **pros:** Unlike Visual Studio built-in tools - open source code.
+* **pros:** Has less problems than Coverlet.MSBuild based approach.
+
+
+
+4. Opencover
+
+Archived by repository owner (See [link](https://github.com/OpenCover/opencover)).
+
+
 
 ### Referenced / used documentation
 
