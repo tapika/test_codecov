@@ -21,7 +21,7 @@ There are various methods enabling code coverage in Visual Studio - I will list 
    Cake integration - see `testCoverletXPlatCollector`.
    Code coverage is configured via `coverlet.runsettings`.
 
-* **pros:** Generally does not suffers from the same problems as 3rd options.
+* **pros:** Generally does not suffers from the same problems as 3rd option.
 
 * **cons:** Uses different configuration file than Visua Studio - Visual studio uses `.runsettings`, Coverlet uses `coverlet.coverage`
 
@@ -40,7 +40,7 @@ There are various methods enabling code coverage in Visual Studio - I will list 
 
 
 
-2. Coverlet.MsBuild (How to make it - [link](#xunit-project-set))
+3. Coverlet.MsBuild (How to make it - [link](#xunit-project-set))
 
 Cake integration - see `testCoverletEnableCoverage`.
 
