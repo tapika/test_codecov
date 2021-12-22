@@ -47,7 +47,6 @@ namespace cakebuild
             string project2build = "XUnit.VsTest";
 
             string coverageRunsettings = Path.Combine(rootDir, ".runsettings"); ;
-            string projectPath = Path.Combine(rootDir, $@"{project2build}\{project2build}.csproj"); ;
 
             string solutionPath = Path.Combine(rootDir, "XUnit.Coverage.sln"); ;
             context.DotNetBuild(solutionPath, new DotNetBuildSettings { Configuration = "Release", NoLogo = true });
