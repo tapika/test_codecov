@@ -33,17 +33,10 @@ namespace cakebuild
             string rootDir = context.RootDirectory;
             string testResultsDir = System.IO.Path.Combine(rootDir, $@"build\testResults_{nameof(testVsTest)}");
 
-            if (Directory.Exists(testResultsDir))
-            {
-                Directory.Delete(testResultsDir, true);
-            }
+            // Directory must be cleaned and re-created, as *.coverage filename changes everytime
+            if (Directory.Exists(testResultsDir)) Directory.Delete(testResultsDir, true);
+            if (!Directory.Exists(testResultsDir)) Directory.CreateDirectory(testResultsDir);
 
-            if (!Directory.Exists(testResultsDir))
-            {
-                Directory.CreateDirectory(testResultsDir);
-            }
-
-            //string project2build = "XUnit.Coverlet.Collector";
             string project2build = "XUnit.VsTest";
 
             string coverageRunsettings = Path.Combine(rootDir, ".runsettings"); ;
@@ -51,7 +44,6 @@ namespace cakebuild
             string solutionPath = Path.Combine(rootDir, "XUnit.Coverage.sln"); ;
             context.DotNetBuild(solutionPath, new DotNetBuildSettings { Configuration = "Release", NoLogo = true });
 
-            //string outPath = System.IO.Path.Combine(rootDir, $@"XUnit.Coverlet.MSBuild\bin\Release\XUnit.Coverlet.MSBuild.dll");
             string outPath = System.IO.Path.Combine(rootDir, $@"{project2build}\bin\Release\{project2build}.dll");
 
             var settings = new VSTestSettings
