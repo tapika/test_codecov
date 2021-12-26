@@ -59,17 +59,13 @@ Archived by repository owner (See [link](https://github.com/OpenCover/opencover)
 
 ##### Visual Studio built-in tools
 
-Visual studio code coverage does not support any "standard" file formats (like `opencover`, `cobertura`), however
-it's possible to use `ReportGenerator` to get `Cobetura` file format.
+Visual studio code coverage does not support any "standard" file formats (like `opencover`, `cobertura`), however it's possible to use `ReportGenerator` to get `Cobetura` file format.
 
 `Cobertura` file format can be used when you upload coverage test results to `coveralls.io` using `coveralls.net.exe`.
 
-Referred links:
+Referred links: [Support non-binary format for Code Coverage #2874](https://github.com/microsoft/vstest/issues/2874)
 
-[Support non-binary format for Code Coverage #2874](https://github.com/microsoft/vstest/issues/2874)
-
-Even thus according to link there is `Cobertura` file format support, it cannot be used via command line arguments to
-`CodeCoverage.exe`.
+Even thus according to link there is `Cobertura` file format support, it cannot be used via command line arguments to `CodeCoverage.exe`.
 
 ##### XUnit project set
 
@@ -101,4 +97,12 @@ dotnet add cakebuild/cakebuild.csproj package Cake.Coverlet
 ```
 
 And after that some manual coding.
+
+##### Upload tests results to coveralls.io
+
+See:
+
+* [dotnet-coveralls.exe tool github](https://github.com/coveralls-net/coveralls.net)
+
+* [Coveralls cake extension](https://cakebuild.net/extensions/cake-coveralls/)
 
