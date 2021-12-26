@@ -57,6 +57,20 @@ Archived by repository owner (See [link](https://github.com/OpenCover/opencover)
 
 ### Referenced / used documentation
 
+##### Visual Studio built-in tools
+
+Visual studio code coverage does not support any "standard" file formats (like `opencover`, `cobertura`), however
+it's possible to use `ReportGenerator` to get `Cobetura` file format.
+
+`Cobertura` file format can be used when you upload coverage test results to `coveralls.io` using `coveralls.net.exe`.
+
+Referred links:
+
+[Support non-binary format for Code Coverage #2874](https://github.com/microsoft/vstest/issues/2874)
+
+Even thus according to link there is `Cobertura` file format support, it cannot be used via command line arguments to
+`CodeCoverage.exe`.
+
 ##### XUnit project set
 
 `Numbers`, `XUnit.Coverlet.Collector`, `XUnit.Coverlet.MSBuild` projects were made based on following article: [Use code coverage for unit testing](https://docs.microsoft.com/en-us/dotnet/core/testing/unit-testing-code-coverage?tabs=windows).
