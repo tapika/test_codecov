@@ -24,6 +24,7 @@ jobs:
     steps:
       - name: Run cmd
         run: dir
+        shell: cmd
 
       - name: Github actions environment to local environment
         uses: cake-build/cake-action@v1
