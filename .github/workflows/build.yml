@@ -37,7 +37,4 @@ jobs:
       # Runs a single command using the runners shell
       - name: Run a one-line script
         run: .\cakebuild.bat
-        env:
-          ACTIONS_RUNTIME_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          ACTIONS_RUNTIME_URL: ${{ secrets.ACTIONS_RUNTIME_URL }}
         
