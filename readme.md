@@ -26,6 +26,8 @@ Cake integration - see `testVsTest`.
 
 * **cons:** Requires one extra conversion step `.coverage` (Binary file) > `.xml` > `report`, where other choices does not intermediate step.
 
+* **cons:** Code coverage shown in Visual studio does not matches code coverage produced by tooling - maybe because intermediate tools.
+
   
 
 2. Coverlet.MsBuild (How to make it - [link](#xunit-project-set))
@@ -35,6 +37,8 @@ Cake integration - see `testCoverletEnableCoverage`.
 * **cons:** Code coverage is configured differently - Visual Studio - Visual studio uses `.runsettings`, Coverlet is configured via command line (See `cakebuild/... CoverletSettings`)
 
 * **cons:** According to coverlet git has some issues, see [Known Issues](https://github.com/coverlet-coverage/coverlet/blob/master/Documentation/KnownIssues.md).
+
+* **pros:** Can display more information about code - like Cyclomatic complexity, line/branch/method coverage.
 
   
 
@@ -46,6 +50,7 @@ Code coverage is configured via `coverlet.runsettings`.
 * **cons:** Uses different configuration file than Visual Studio - Visual studio uses `.runsettings`, Coverlet uses `coverlet.coverage`
 * **pros:** Unlike Visual Studio built-in tools - open source code.
 * **pros:** Has less problems than Coverlet.MSBuild based approach.
+* **pros:** Can display more information about code - like Cyclomatic complexity, line/branch/method coverage.
 
 
 
